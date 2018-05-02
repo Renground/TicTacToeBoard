@@ -1,0 +1,14 @@
+sudo: enabled
+
+language: cpp
+
+before_install:
+  - mkdir tictactoe
+  - cd tictactoe
+  - git clone git@github.com:Renground/TicTacToeBoard.git
+  - make
+
+script:
+  - make clean
+  - make
+  - ./TicTacToeBoardTest
